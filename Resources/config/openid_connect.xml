@@ -39,7 +39,7 @@
         
         <service id="waldo_oic_rp.logout" class="%waldo_oic_rp.logout.class%">
             <argument type="collection" /><!-- options -->
-            <argument type="service" id="security.token_storage" />
+            <argument type="service" id="security.context" />
             <argument type="service" id="security.http_utils" />
             <argument type="service" id="router" />
         </service>
