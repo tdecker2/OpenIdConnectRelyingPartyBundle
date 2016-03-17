@@ -288,7 +288,7 @@ abstract class AbstractGenericOICResourceOwner implements ResourceOwnerInterface
         // same as previous. If Not, that isn't good...
         if ($content['sub'] !== $oicToken->getIdToken()->claims['sub']) {
             if($this->logger !== null) {
-                $this->logger->error("InvalidIdTokenException", $oicToken);
+                $this->logger->error("InvalidIdTokenException", (array) $oicToken);
             }
             
             throw new InvalidIdTokenException("The sub value is not equal");
